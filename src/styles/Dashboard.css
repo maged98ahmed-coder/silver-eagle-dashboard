@@ -1,0 +1,107 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dashboard h1 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: var(--white);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-right: 4px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card.green {
+  border-right-color: var(--accent);
+}
+
+.stat-card.red {
+  border-right-color: var(--danger);
+}
+
+.stat-card.blue {
+  border-right-color: var(--secondary);
+}
+
+.stat-card.purple {
+  border-right-color: #8b5cf6;
+}
+
+.stat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.stat-header svg {
+  opacity: 0.8;
+}
+
+.stat-card h3 {
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-card small {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.75rem;
+}
+
+.change {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.recent-sales {
+  margin-top: 2rem;
+}
+
+.recent-sales h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.total {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard h1 {
+    font-size: 1.5rem;
+  }
+}
